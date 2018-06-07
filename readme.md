@@ -1,5 +1,5 @@
 # RHDM project for Fuse, AMQ, RHDM demo
-This repository can be imported into RHDM to support the Fuse, AMQ,
+This repository can be imported into RHDM to support the [Fuse, AMQ,
 and RHDM demo](https://github.com/rlucente-se-jboss/fuse-amq-dm-demo).
 
 To do that, install and launch RHDM.  Browse to
