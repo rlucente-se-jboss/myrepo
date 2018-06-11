@@ -12,8 +12,8 @@
   <attributeCols/>
   <conditionPatterns>
     <Pattern52>
-      <factType>Country</factType>
-      <boundName>f1</boundName>
+      <factType>Customer</factType>
+      <boundName>customer</boundName>
       <isNegated>false</isNegated>
       <conditions>
         <condition-column52>
@@ -47,7 +47,7 @@
       <hideColumn>false</hideColumn>
       <width>100</width>
       <header>Geographic Region</header>
-      <boundName>f1</boundName>
+      <boundName>customer</boundName>
       <factField>region</factField>
       <type>String</type>
       <update>false</update>
