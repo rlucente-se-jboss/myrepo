@@ -30,11 +30,13 @@
           <fieldType>String</fieldType>
           <operator>==</operator>
           <parameters/>
+          <binding></binding>
         </condition-column52>
       </conditions>
       <window>
         <parameters/>
       </window>
+      <entryPointName></entryPointName>
     </Pattern52>
   </conditionPatterns>
   <actionCols>
@@ -50,7 +52,7 @@
       <boundName>customer</boundName>
       <factField>region</factField>
       <type>String</type>
-      <update>false</update>
+      <update>true</update>
     </set-field-col52>
   </actionCols>
   <auditLog>

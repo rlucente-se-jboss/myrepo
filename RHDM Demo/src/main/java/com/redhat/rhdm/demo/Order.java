@@ -8,14 +8,15 @@ public class Order implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Order ID")
+	@org.kie.api.definition.type.Label("Order ID")
 	private java.lang.String id;
-	@org.kie.api.definition.type.Label(value = "Customer")
-	private com.redhat.rhdm.demo.Customer customer;
-	@org.kie.api.definition.type.Label(value = "Date")
+	@org.kie.api.definition.type.Label("Date")
 	private java.util.Date date;
-	@org.kie.api.definition.type.Label(value = "Order Lines")
+	@org.kie.api.definition.type.Label("Order Lines")
 	private java.util.List<com.redhat.rhdm.demo.OrderLine> orderlines;
+
+	@org.kie.api.definition.type.Label("SpecialHandling")
+	private java.lang.Boolean isSpecial;
 
 	public Order() {
 	}
@@ -26,14 +27,6 @@ public class Order implements java.io.Serializable {
 
 	public void setId(java.lang.String id) {
 		this.id = id;
-	}
-
-	public com.redhat.rhdm.demo.Customer getCustomer() {
-		return this.customer;
-	}
-
-	public void setCustomer(com.redhat.rhdm.demo.Customer customer) {
-		this.customer = customer;
 	}
 
 	public java.util.Date getDate() {
@@ -53,13 +46,21 @@ public class Order implements java.io.Serializable {
 		this.orderlines = orderlines;
 	}
 
-	public Order(java.lang.String id, com.redhat.rhdm.demo.Customer customer,
-			java.util.Date date,
-			java.util.List<com.redhat.rhdm.demo.OrderLine> orderlines) {
+	public java.lang.Boolean getIsSpecial() {
+		return this.isSpecial;
+	}
+
+	public void setIsSpecial(java.lang.Boolean isSpecial) {
+		this.isSpecial = isSpecial;
+	}
+
+	public Order(java.lang.String id, java.util.Date date,
+			java.util.List<com.redhat.rhdm.demo.OrderLine> orderlines,
+			java.lang.Boolean isSpecial) {
 		this.id = id;
-		this.customer = customer;
 		this.date = date;
 		this.orderlines = orderlines;
+		this.isSpecial = isSpecial;
 	}
 
 }
