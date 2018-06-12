@@ -1,0 +1,13 @@
+package com.redhat.rhdm.demo;
+
+import java.lang.Number;
+
+rule "Assign Special Handling for Large Orders"
+    dialect "mvel"
+    when
+        $o : Order( orderlines.size() > 0 )
+        Number( intValue() > 100 )
+            from accumulate (OrderLine( $q : quantity > 0 ) from $o.orderlines, sum($q))
+    then
+        $o.setIsSpecial( true )
+end
